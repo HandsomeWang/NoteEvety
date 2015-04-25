@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://service.handsome.com/" targetNamespace="http://service.handsome.com/" version="1.0">
+
+  <xs:element name="addNote" type="tns:addNote"/>
+
+  <xs:element name="addNoteResponse" type="tns:addNoteResponse"/>
+
+  <xs:element name="deleteBook" type="tns:deleteBook"/>
+
+  <xs:element name="deleteBookResponse" type="tns:deleteBookResponse"/>
+
+  <xs:element name="findNoteByNid" type="tns:findNoteByNid"/>
+
+  <xs:element name="findNoteByNidResponse" type="tns:findNoteByNidResponse"/>
+
+  <xs:element name="listNoteByUid" type="tns:listNoteByUid"/>
+
+  <xs:element name="listNoteByUidResponse" type="tns:listNoteByUidResponse"/>
+
+  <xs:element name="updateBook" type="tns:updateBook"/>
+
+  <xs:element name="updateBookResponse" type="tns:updateBookResponse"/>
+
+  <xs:complexType name="listNoteByUid">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="listNoteByUidResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:note"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="note">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ncontent" type="xs:string"/>
+      <xs:element minOccurs="0" name="ndate" type="xs:dateTime"/>
+      <xs:element name="nid" type="xs:int"/>
+      <xs:element name="uid" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="deleteBook">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="deleteBookResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="findNoteByNid">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="findNoteByNidResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="updateBook">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="updateBookResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="addNote">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="addNoteResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

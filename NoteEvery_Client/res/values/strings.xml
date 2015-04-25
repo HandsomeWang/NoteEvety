@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">NoteEvery_Client</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+
+    <string name="username">用户名</string>
+    <string name="password">密码</string>
+    <string name="loginnow">立即登录</string>
+    <string name="regist">快速注册</string>
+    <string name="loginback">返回登录</string>
+    <string name="registnow">立即注册</string>
+    <string name="addnew">添加</string>
+    <string name="f">刷新</string>
+    <string name="addnewtext">点击编辑新的便笺</string>
+    <string name="editsure">确认修改</string>
+    <string name="cancel">取消</string>
+    <string name="delete">删除便笺</string>
+</resources>

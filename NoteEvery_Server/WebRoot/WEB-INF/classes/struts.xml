@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<constant name="struts.action.extension" value="action" />
+	<constant name="struts.custom.i18n.resources" value="resource"></constant>
+	<constant name="struts.i18n.encoding" value="UTF-8"></constant>
+	<package name="bookstore" namespace="/" extends="struts-default">
+	
+		<action name="goregist" class="com.handsome.action.UserAction"
+			method="goregist">
+			<result>login.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+		<action name="iflogin" class="com.handsome.action.UserAction"
+			method="iflogin">
+			<result>user/mynote.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+		<action name="addnote" class="com.handsome.action.NoteAction"
+			method="addnote">
+			<result>user/mynote.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+		<action name="delete" class="com.handsome.action.NoteAction"
+			method="delete">
+			<result>user/mynote.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+		<action name="goedit" class="com.handsome.action.NoteAction"
+			method="goedit">
+			<result>user/editnote.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+		<action name="edit" class="com.handsome.action.NoteAction"
+			method="edit">
+			<result>user/mynote.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+		
+	</package>
+</struts>

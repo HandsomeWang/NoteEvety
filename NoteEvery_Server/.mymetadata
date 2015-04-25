@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="NoteEvery"
+  id="myeclipse.1415876889839"
+  context-root="/NoteEvery"
+  j2ee-spec="5.0"
+  archive="NoteEvery.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

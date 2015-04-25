@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="HandlerLeak" severity="ignore" />
+    <issue id="NewApi">
+        <ignore path="src/com/handsome/activities/EditActivity.java" />
+        <ignore path="src/com/handsome/activities/NoteActivity.java" />
+    </issue>
+</lint>
